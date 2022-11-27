@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    padding: 0; margin: 0;
+    font-family: sans-serif;
+}
+
+div.sayac {
+    background-color: navy;
+    color: white;
+}
+
+div.sayac button {
+    padding: 1rem;
+    border: 3px solid black;
+}
