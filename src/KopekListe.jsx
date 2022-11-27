@@ -1,13 +1,13 @@
 import React from "react"
 
-function KopekListe() {
+function KopekListe( {fotoSayisi} ) {
     const [ kopekFotolari, kopekFotoGuncelle ] = React.useState(null)
 
     React.useEffect( ()=>{
-        fetch("https://dog.ceo/api/breeds/image/random/5")
+        fetch(`https://dog.ceo/api/breeds/image/random/${fotoSayisi}`)
         .then(sonuc => sonuc.json())
         .then(veri => kopekFotoGuncelle(veri.message))
-    }, [] )
+    }, [fotoSayisi] )
 
     return (
         <div>
